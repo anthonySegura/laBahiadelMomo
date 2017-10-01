@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../libs/bootstrap/bootstrap-4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <title>Registro</title>
+</head>
+<body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <h1>Registro</h1>
+                        <form>
+                            <!--Input for name-->
+                            <div class="form-group row">
+                                <label for="nombre" class = "col-sm-2 col-form-label">Nombre</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+                                </div>
+                            </div>
+                            <!--Input for last name-->
+                            <div class="form-group row">
+                                <label for="apellidos" class="col-sm-2 col-form-label">Apellidos</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="apellidos" placeholder="Ingrese sus apellidos">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="username" class="col-sm-2 col-form-label">Usuario</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="username" placeholder="Nombre de usuario">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="passw" class="col-sm-2 col-form-label">Contraseña</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="passw" placeholder="Ingrese su contraseña">
+                                </div>
+                            </div>
+                            <!--Input for age-->
+                            <div class="form-group row">
+                                <label for="edad" class="col-sm-2 col-form-label">Edad</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="edad" placeholder="Ingrese su edad">
+                                </div>
+                            </div>
+                            <!--Input for email-->
+                            <div class="form-group row">
+                                <label for = "email" class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="email" placeholder="Ingrese su email">
+                                </div>
+                            </div>
+                            <div style="display: inline-flex; width: 100%;  margin-top: 5%;">
+                                <label style="margin-right: 5%; margin-left: 5%;">Usuario Administrador</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="admin" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <hr>
+                            <h4>Información de Tarjeta de Crédito</h4>
+                            <!--Input for credit card number-->
+                            <div class="form-group row">
+                                <label for="tarjeta" class="col-sm-2 col-form-label">Tarjeta</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="tarjeta" placeholder="Número de tarjeta de crédito">
+                                </div>
+                            </div>
+                            <!--Credit card security code-->
+                            <div class="form-group row">
+                                <label for="code" class="col-sm-2 col-form-label">Código</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="code" placeholder="Código de seguridad de su tarjeta de crédito">
+                                </div>
+                            </div>
+                            <div class="form-group date row">
+                                <label for="date" class="col-sm-2 col-form-label">Expira</label>
+                                <div class="col-sm-10">
+                                    <input type="date" class="form-control" id="date">
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <input type="button" class="btn btn-success" onclick="registerUser()" value="Registrarme">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card" id="loginForm">
+                        <h1>Login</h1>
+                        <div class="form-group row">
+                            <label for="username_l" class="col-sm-2 col-form-label">Usuario</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="username_l" placeholder="Nombre de usuario">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="passw_l" class="col-sm-2 col-form-label">Contraseña</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="passw_l" placeholder="Ingrese su contraseña">
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <input type="button" class="btn btn-success" value="Ingresar" onclick="login()">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../../libs/jquery/jquery-3.2.1.min.js"></script>
+        <script src="../scripts/register&login.js"></script>
+</body>
+</html>
