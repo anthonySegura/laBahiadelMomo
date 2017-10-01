@@ -39,7 +39,11 @@ function loadCategorie(categorie, data){
 	var $categorie = $("#" + categorie);
 	var items = "";
 	$.each(data, function (index, value) {
-		items += " <div class=\"product-item\">\n" +
+		var onClickEvent = function () {
+			sessionStorage.setItem('currentItem', JSON.stringify(value));
+			location.href = 'src/views/product.html'
+		};
+		$categorie.append(" <div class=\"product-item\" id=\"product-" + value.name + "\">\n" +
 			"           <a href=\"#self\">\n" +
 			"               <img src=" + value.img + " " + "class=\"image\" style=\"height:600px\">\n" +
 			"           </a>\n" +
@@ -48,9 +52,9 @@ function loadCategorie(categorie, data){
 			"                    <div class=\"text\">"+ "Precio $" + value.price + "</div>\n" +
 			"                    <div class=\"text\">"+ "Restantes " + value.stock + "</div>\n" +
 			"              </div>\n" +
-			"     </div>";
+			"     </div>");
+		$('#product-' + value.name).click(onClickEvent);
 	});
-	$categorie.append(items);
 }
 
 function loadCategories(data, col1, col2) {
