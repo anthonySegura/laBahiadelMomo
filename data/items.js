@@ -1,5 +1,9 @@
 "use strict";
 
+/**
+ * Creates the initial data and saves it in to the local storage
+ */
+
 var itemID = localStorage.getItem('itemID') === null ? 0: JSON.parse(localStorage.getItem('itemID'));
 
 {
