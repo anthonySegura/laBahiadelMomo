@@ -33,7 +33,7 @@ var itemID = localStorage.getItem('itemID') === null ? 0: JSON.parse(localStorag
 				name: 'feel',
 				img: 'resources/img/featured/feel.jpg'
 			}, {
-				name: 'trum',
+				name: 'trump',
 				img: 'resources/img/featured/trump.jpg'
 			}
 		]

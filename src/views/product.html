@@ -15,14 +15,16 @@
     <div>
         <div class="text-center">
             <div class="container">
-                <div class="col-sm-6 col-centered">
+                <div class="col-sm-6 col-centered" id="productCard">
                     <h1 id="productName">Nombre del Momo</h1>
-                    <img style="width:100%; height: 250px;" id="productImg" alt="Meme not found">
+                    <div class="zoomin frame">
+                        <img id="productImg" alt="Meme not found">
+                    </div>
                     <div class="product-info">
                         <div class="text" id="productPrice"></div>
                         <div class="text" id="productStock"></div>
-                        <input type="button" class="btn btn-primary" value="Agregar al carrito">
-                        <input type="button" class="btn btn-primary" value="Agregar a mi lista de deseos">
+                        <button class="btn btn-primary">Agregar al carrito</button>
+                        <button class="btn btn-primary">Agregar a mi lista de deseos</button>
                     </div>
                 </div>
             </div>
