@@ -19,6 +19,8 @@ $(document).ready(function () {
 function showProductInfo() {
 	$('#productName').text(product.name);
 	$('#productImg').attr('src', '../../' + product.img);
+	$('#productPrice').append('Precio $' + product.price);
+	$('#productStock').append('Restantes ' + product.stock);
 }
 
 function overrideNavbarLinks() {
@@ -27,6 +29,7 @@ function overrideNavbarLinks() {
 	$('#pepeLink').attr("href", "../../index.html#pepe");
 	$('#feelLink').attr("href", "../../index.html#feel");
 	$('#dogeLink').attr("href", "../../index.html#doge");
+	$('#loginBtn').attr("href", "../../register.html");
 }
 
 

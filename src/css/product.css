@@ -2,11 +2,28 @@
     Css styles to the product view
  */
 
+img{
+    border-radius: 4px;
+}
 
 
 #productName{
-
+    text-align: center;
+    text-transform: capitalize;
 }
 
+.product-info div{
+    margin-bottom: 5%;
+}
+
+.product-info input{
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
 
 

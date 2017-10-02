@@ -43,7 +43,7 @@ function loadCategorie(categorie, data){
 			sessionStorage.setItem('currentItem', JSON.stringify(value));
 			location.href = 'src/views/product.html'
 		};
-		$categorie.append(" <div class=\"product-item\" id=\"product-" + value.name + "\">\n" +
+		$categorie.append(" <div class=\"product-item\" id=\"product-" + removeSpaces(value.name) + "\">\n" +
 			"           <a href=\"#self\">\n" +
 			"               <img src=" + value.img + " " + "class=\"image\" style=\"height:600px\">\n" +
 			"           </a>\n" +
@@ -52,9 +52,13 @@ function loadCategorie(categorie, data){
 			"                    <div class=\"text\">"+ "Precio $" + value.price + "</div>\n" +
 			"                    <div class=\"text\">"+ "Restantes " + value.stock + "</div>\n" +
 			"              </div>\n" +
-			"     </div>");
-		$('#product-' + value.name).click(onClickEvent);
+			"             </div>");
+		$('#product-' + removeSpaces(value.name)).click(onClickEvent);
 	});
+}
+
+function removeSpaces(text) {
+	return text.replace(/\s/g,'');
 }
 
 function loadCategories(data, col1, col2) {
