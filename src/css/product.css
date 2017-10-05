@@ -48,6 +48,7 @@ body{
     -ms-transition: all 2s ease;
     transition: all 1.5s ease;
 }
+
 .zoomin img:hover {
     -webkit-transform: scale(1.5);
     transform: scale(1.5);

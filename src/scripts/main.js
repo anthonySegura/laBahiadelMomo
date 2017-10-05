@@ -18,6 +18,7 @@ $(document).ready(function () {
 	loadCategories(doge.items, 'doge-col-1', 'doge-col-2');
 	addNavBar();
 	showUserInfo();
+	updateCartIcon();
 });
 
 // Adds the featured items into the carousel
@@ -34,6 +35,11 @@ function loadFeatured() {
 		);
 	});
 }
+
+function removeSpaces(text) {
+	return text.replace(/\s/g,'');
+}
+
 
 function loadCategorie(categorie, data){
 	var $categorie = $("#" + categorie);
@@ -57,9 +63,6 @@ function loadCategorie(categorie, data){
 	});
 }
 
-function removeSpaces(text) {
-	return text.replace(/\s/g,'');
-}
 
 function loadCategories(data, col1, col2) {
 	var left = [];

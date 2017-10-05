@@ -1,0 +1,7 @@
+ul{
+    list-style-type: none;
+}
+
+#productList li{
+    margin: 3%;
+}

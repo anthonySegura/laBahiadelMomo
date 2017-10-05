@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Producto</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="../../libs/bootstrap/bootstrap-3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="../css/cart.css">
 </head>
 <body>
     <header>
@@ -16,16 +17,10 @@
         <div class="text-center">
             <div class="container">
                 <div class="col-sm-6 col-centered" id="productCard">
-                    <h1 id="productName"></h1>
-                    <div class="zoomin frame">
-                        <img id="productImg" alt="Meme not found">
-                    </div>
-                    <div class="product-info">
-                        <div class="text" id="productPrice"></div>
-                        <div class="text" id="productStock"></div>
-                        <button class="btn btn-primary" id="addToCart" onclick="addToCart()">Agregar al carrito</button>
-                        <button class="btn btn-primary" id="addToWishList" onclick="addToWishList()">Agregar a mi lista de deseos</button>
-                    </div>
+                    <h1 id="cartTitle">Tu carrito de compra </h1>
+                    <ul id="productList">
+
+                    </ul>
                 </div>
             </div>
         </div>
@@ -34,10 +29,17 @@
     <div class="footer">
         <small>&copy; Copyright 2017, La Bahía del Momo</small>
     </div>
-
     <script src="../../libs/jquery/jquery-3.2.1.min.js"></script>
     <script src="../../libs/bootstrap/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script src="../scripts/createNavBar.js"></script>
     <script src="../scripts/shoping.js"></script>
+    <script>
+	    $(document).ready(function () {
+		    loadCartItems();
+		    $('#cartIcon').remove();
+		    $('.btn-danger').click(removeFromCart);
+		    document.title = 'Carrito de Momos';
+	    });
+    </script>
 </body>
 </html>
