@@ -1,5 +1,9 @@
 "use strict";
 
+/**
+ *  Register and login functions
+ */
+
 $(document).ready(function () {
 	sessionStorage.clear();
 	lockUserFields(true);
@@ -11,8 +15,62 @@ $(document).ready(function () {
 			lockUserFields(false);
 		}
 	});
+	// Some users data
+	{
+		const user1 = {
+			cart: [],
+			wishList: [],
+			user_info: {
+				name: 'rodolfo',
+				age: 14,
+				email: 'niñorata666@rata.com',
+				password: '123',
+				username: 'niñoRata64',
+				rolData: {
+					type: 'normal',
+					creditCardInfo: {
+						cardNumber: 123,
+						securityCode: 123
+					}
+				}
+			}
+		};
+
+		const user2 = {
+			cart: [{
+				id: 7,
+				img: "resources/img/pepe/pepetrump.png",
+				name: "pepetrump",
+				price: 75,
+				solds: 0,
+				stock: 20
+			}],
+			wishList: [],
+			user_info: {
+				name: 'albertito',
+				age: 28,
+				email: 'niñorata27@rata.com',
+				password: '123',
+				username: 'niñoRata37',
+				rolData: {
+					type: 'normal',
+					creditCardInfo: {
+						cardNumber: 123,
+						securityCode: 123
+					}
+				}
+			}
+		};
+		var users = localStorage.getItem('users');
+		if (users === null) {
+			users = [];
+			users.push(user1, user2);
+			localStorage.setItem('users', JSON.stringify(users));
+		}
+	}
 });
 
+// Save the user into the local storage
 function registerUser() {
 	var users = localStorage.getItem('users');
 	var userData = getRegisterInfo();
@@ -38,6 +96,8 @@ function registerUser() {
 	loadMainView(user);
 }
 
+// Search the user info into the local storage
+// if the user is registered loads the main view
 function login(){
 	var users = localStorage.getItem('users');
 	var userData = getLoginInfo();
@@ -45,8 +105,9 @@ function login(){
 	// Search the user in the user list
 	console.log(userData);
 	for(var i = 0; i < users.length; i++){
-		console.log(users[i]);
+		//console.log(users[i]);
 		if(users[i].user_info.username === userData.username && users[i].user_info.password === userData.password){
+			console.log('ingresando');
 			loadMainView(users[i]);
 			return;
 		}
@@ -65,7 +126,7 @@ function loadMainView(user) {
 			location.href = '../../index.html';
 			break;
 		case 'administrator':
-
+			location.href = '../views/adminView.html';
 			break;
 		default:
 			location.reload();

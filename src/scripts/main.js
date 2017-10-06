@@ -40,7 +40,7 @@ function removeSpaces(text) {
 	return text.replace(/\s/g,'');
 }
 
-
+// Add dynamically the items in the view
 function loadCategorie(categorie, data){
 	var $categorie = $("#" + categorie);
 	var items = "";
@@ -63,7 +63,7 @@ function loadCategorie(categorie, data){
 	});
 }
 
-
+// Adds the items in col1 and col2
 function loadCategories(data, col1, col2) {
 	var left = [];
 	var right = [];

@@ -24,7 +24,7 @@ function closeSession() {
 	location.reload();
 }
 
-
+// Update the number of elements of the cart
 function updateCartIcon() {
 	var user = sessionStorage.getItem('currentUser');
 	if(user !== null && JSON.parse(user).cart.length > 0) {
@@ -64,7 +64,7 @@ function addNavBar(){
 		"                </ul>\n" +
 		"                <ul class=\"nav navbar-nav navbar-right\" id=\"right-navBar\">\n" +
 		"                    <!--<li><a href=\"#\"><span class=\"glyphicon glyphicon-user\"></span> Sign Up</a></li>-->\n" +
-		"                    <li><a href=\"#\">Mi lista de deseos</a></li>\n" +
+		"                    <li><a id=\"wishList\" href=\"#\">Mi lista de deseos</a></li>\n" +
 		"                    <li><a id=\"cartIcon\" href=\"src/views/cart.html\"><span class=\"glyphicon glyphicon-shopping-cart\"></span></a></li>\n" +
 		"					<li><a href=\"src/views/register.html\" id=\"loginBtn\"></a></li>\n"+
 		"                </ul>\n" +
